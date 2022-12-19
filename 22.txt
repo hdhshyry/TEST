@@ -1,0 +1,7 @@
+ali
+age
+25
+mammad
+age
+58
+your total is 83

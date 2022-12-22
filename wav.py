@@ -1,4 +1,5 @@
 import os
+import shutil
 import pyautogui
 import time
 def borrrow (x=4,y=4):    
@@ -16,6 +17,20 @@ def borrrow (x=4,y=4):
     for i in range(x):
         time.sleep(0.4)
         pyautogui.press('tab')
+pyautogui.hotkey('winleft', 'd')
+source_folder = r'J:\program\wav\\'
+destination_folder = r'C:\Users\Moalem\Music\\'
+# fetch all files
+for file_name in os.listdir(source_folder):
+    # construct full file path
+    source = source_folder + file_name
+    destination = destination_folder + file_name
+    # copy only files
+    if os.path.isfile(source):
+        shutil.copy(source, destination)
+        print('copied', file_name)
+for i in range(50):
+    pyautogui.press('volumeup')
 pyautogui.hotkey('winleft','r')
 pyautogui.typewrite('control mmsys.cpl sounds')
 pyautogui.press('enter')
@@ -70,33 +85,3 @@ pyautogui.press('enter')
 for i in range (7):
     pyautogui.press('tab')
 pyautogui.press('enter')
-# sTep 4
-
-
-   
-# ......
-#   .......
-# os.system('{0}\\System32\\control.exe '.format(os.environ['WINDIR']))
-# # os.startfile(           r'C:\Users\Moalem\Desktop\ali')
-
-# # for i in range(1):
-# time.sleep(1)
-# pyautogui.hotkey('winleft','up')
-# pyautogui.moveTo(1245,99)
-# time.sleep(1)
-# pyautogui.click()
-# time.sleep(1)
-# pyautogui.moveTo(1248,120)
-# pyautogui.click()
-# time.sleep(1)
-# pyautogui.moveTo(471,276)
-# pyautogui.click()
-# time.sleep(1)
-# pyautogui.moveTo(475,220)
-# pyautogui.click()
-# time.sleep(1)
-# pyautogui.moveTo(345,316)
-# pyautogui.click()
-
-
-                                                                        

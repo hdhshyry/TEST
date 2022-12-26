@@ -3,3 +3,6 @@ those people who do not know understand true pain,they can never understand true
 love breeds sacrifice,which in turn breeds hatred.Then you can know pain.
 git billakh
 hi have nice day git mf
+git init 
+git add -A
+git commit -m 
